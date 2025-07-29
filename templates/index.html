@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- What are you looking here for, bud? ;) -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6pwx</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" href="/static/img/Avatar.png" type="image/x-icon">
+    <link rel="stylesheet", href="/static/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>{{ name }}</h1>
+            <h2>AKA {{ nick }}</h2>
+        </header>
+        
+        <main>
+            <div class="hobbies">
+                <h3>main hobbies/skills:</h3>
+                <ul>
+                    {% for hobby in hobbies %}
+                    <li>{{ hobby }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+            <div class="from">
+                <h3>from:</h3>
+                <ul>
+                    <li>{{ location }}</li>
+                </ul>
+            </div>
+
+            <div class="Contacts">
+                {% for contact in contacts %}
+                <a href="{{ contact.url }}" target="_blank">{{ contact.name }}</a>
+                {% endfor %}        
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
